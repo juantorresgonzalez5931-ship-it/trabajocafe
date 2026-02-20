@@ -5,9 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/menu.css">
     <title>Menu sitio de cafë</title>
-    <script></script>
+    <script src="https://kit.fontawesome.com/bdc4e23805.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <!-- logo -->
+            <a href="index.html" class="nav-logo">
+                <h2 class="nav-text">☕ Coffe</h2>
+            </a>
+            <!-- check box invisible: controla el menu movil -->
+             <input type="checkbox" id="Menu-toggle">
+            <!-- iconos responsive: hamburguesa + carrito  -->
+             <div class="iconos-responsive">
+                <label for="menu-toggle" class="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <div class="carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="contador">0</span>
+                </div>
+             </div>
+             <!-- Menu de navegacion -->
+              <ul class="nav-menu">
+                    <li class="nav-item"> <a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"> <a href="menu.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"> <a href="#" class="nav-link">Galeria</a></li>
+                    <li class="nav-item"> <a href="#" class="nav-link">contactenos</a></li>   
+              </ul>
+        </nav>
+    </header>
+    <div class="ecard">
+        <!-- imagen del producto -->
+         <img src="img/hot-beverages.png" alt="Bebidas calientes">
+        <!-- texto informativo -->
+         <div class="contenido">
+            <h2>Bebidas Calientes</h2>
+            <p>Amplia variedad de cafés calientes al vapor para hacerte sentir fresco y ligero</p>
+         </div>
+         <!-- Botones de accion -->
+          <div class="btn-group">
+            <button class="btncomprar">Comprar</button>
+            <button class="detalle">Más detalles</button>
+          </div>
+    </div>
 </body>
 </html>
