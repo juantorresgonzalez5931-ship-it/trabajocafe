@@ -217,5 +217,91 @@ header .navbar{
     
     }
 
+@media (max-width: 480px) {
 
+    .hero-section .hero-details .title { font-size: 1.7rem; }
+    .hero-section .hero-details .subtitle { font-size: 1.3rem; }
+    .hero-section .hero-details .description { 
+        font-size: 0.95rem; 
+        margin: 18px 0 30px; 
+    }
+    .hero-section .hero-details .button { 
+        padding: 10px 20px; 
+        font-size: 0.95rem; 
+        width: 100%; 
+        text-align: center; 
+    }
+    .hero-section .hero-details .buttons { 
+        flex-direction: column; 
+        gap: 14px; 
+        width: 100%; 
+    }
+    .hero-section .hero-image-wrapper { max-width: 220px; }
+}
+
+/* --- Media Query: Tabletas (1024px) --- */
+@media (max-width: 1024px) {
+    .hero-section .section-content { padding: 100px 40px 60px; gap: 30px; }
+    .hero-section .hero-details .subtitle { font-size: 1.9rem; max-width: 90%; }
+    .hero-section .hero-details .description { max-width: 90%; }
+    .hero-section .hero-image-wrapper { max-width: 380px; margin-right: 0; }
+}
+
+/* --- Media Query: Celulares (768px) --- */
+@media (max-width: 768px) {
+    header .navbar {
+        padding: 14px 20px;
+        position: relative;
+        flex-wrap: wrap; 
+    }
+
+    .hamburger { display: flex; }
+
+    .navbar .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #3b141c;
+        padding: 10px 0;
+        order: 3; 
+    }
+
+    /* Abrir menú cuando el checkbox está marcado */
+    .menu-toggle:checked + .nav-menu {
+        display: flex;
+    }
+
+    .navbar .nav-menu .nav-link {
+        border-radius: 0;
+        padding: 14px 24px;
+        font-size: 1rem;
+        width: 100%;
+        display: block;
+    }
+
+    /* Hero Section para Móvil */
+    .hero-section .section-content {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 100px 24px 60px;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-section .hero-details .title { font-size: 2rem; }
+    .hero-section .hero-details .subtitle { font-size: 1.6rem; max-width: 100%; }
+    .hero-section .hero-details .description { font-size: 1rem; max-width: 100%; }
+    .hero-section .hero-details .buttons { justify-content: center; flex-wrap: wrap; }
+    .hero-section .hero-image-wrapper { max-width: 280px; margin-right: 0; }
+}
+
+/* --- Media Query: Celulares pequeños (480px) --- */
+@media (max-width: 480px) {
+    .hero-section .hero-details .title { font-size: 1.7rem; }
+    .hero-section .hero-details .subtitle { font-size: 1.3rem; }
+    .hero-section .hero-details .description { font-size: 0.95rem; margin: 18px 0 30px; }
+    .hero-section .hero-details .button { padding: 10px 20px; font-size: 0.95rem; width: 100%; text-align: center; }
+    .hero-section .hero-details .buttons { flex-direction: column; gap: 14px; width: 100%; }
+    .hero-section .hero-image-wrapper { max-width: 220px; }
+}
 }
