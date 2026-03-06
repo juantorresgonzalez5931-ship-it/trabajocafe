@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/registro.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <title> Registro </title>
+</head>
+<body>
+    <header>
+        <nav class="menu-navegacion">
+            <!-- logo -->
+             <a href="#" class="logo-navegacion">
+                <h1 class="logo-tex"> ☕ Coffe </h1>
+             </a>
+             <!-- caja para el menu movil -->
+              <input type="checkbox" id="menu-toggle" class="menu-toggle">
+              <!-- menu de navegacion -->
+               <ul class="lista-menu">
+                <li class="lista-item">
+                    <a href="./index.html" class="link-nav" target="_blak"> Home </a>
+                </li>
+                <li class="lista-item">
+                    <a href="./menu.html" class="link-nav" target="_blak"> Menu </a>
+                </li>
+                <li class="lista-item">
+                    <a href="./galeria.html" class="link-nav" target="_blak"> Galeria </a>
+                </li>
+                <li class="lista-item">
+                    <a href="./contactenos.html" class="link-nav" target="_blak"> Contactenos </a>
+                </li>
+            </ul>
+                <!-- accones del icono de suario y del boton de hamburguesa -->
+                     <div class="nav-actions">
+                        <a href="./carrito.html" class="nav-carrito" title="carrito de compras">
+                            <i class="fa-solid fa-cart-shopping"></i> 
+                        </a>
+                        <!-- este actua como el boton de hamburguesa -->
+                         <label for="menu-toggle" class="hamburguer">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                         </label>
+                     </div>
+        </nav>
+    </header>
+    <div class="contenedor">
+        <div class="formulario">
+            <center> <i class="fa-solid fa-user-plus"></i></center>
+            <h2 class="titulo"> Unete a Coffee  </h2>
+            <h3 class="subtitulo"> Crea tu cuenta y disfruta del mejor sabor  </h3>
+            <div class="info">
+                <div class="id">
+                    <label for="id"> numero de identificacion </label>
+                    <input type="id" id="id" name="id">
+                </div>
+                <div class="nombre-apellido">
+                <div class="nombre">
+                    <label for="nombre"> Nombre </label>
+                    <input type="nombre" id="nombre" name="nombre">
+                </div>
+                <div class="apellido">
+                    <label for="apellido"> Apellido </label>
+                    <input type="apellido" id="apellido" name="apellido">
+                </div>
+                </div>
+                <div class="edad">
+                    <label for="edad"> Edad </label>
+                    <input type="edad" id="edad" name="edad">
+                </div>
+                <div class="gmail">
+                    <label for="email"> Correo electronico </label>
+                    <input type="email" id="correo" name="correo">
+                </div>
+                <div class="telefono">
+                    <label for="telefono"> Telefono </label>
+                    <input type="telefono" id="telefono" name="telefono">
+                </div>
+            </div>
+                <div class="contraseña">
+                    <label for="contraseña"> Contraseña </label>
+                    <input type="contreseña" id="contreseña" name="contreseña">
+                </div>
+                <div class="contraseña">
+                    <label for="contraseña"> Confirmacion de contraseña </label>
+                    <input type="contreseña" id="contreseña" name="contreseña">
+                </div>
+                 <div class="checkbox-wrapper">
+                    <div class="recordarme">
+                        <input type="checkbox" id="miCheckbox">
+                        <label for="miCheckbox"> Acepto los terminos y condiciones y la politica de privacidad </label>
+                    </div>
+            </div>
+            <button class="botonlogin"> Registrarme </button>
+             <div class="registro">
+                ¿Ya tienes cuenta? <a href="./login.html"> Inicia sesion aquí </a>
+            </div>
+    </div>
+</body>
+</html>

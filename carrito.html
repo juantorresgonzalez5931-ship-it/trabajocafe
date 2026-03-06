@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/carrito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <title> Carrito </title>
+</head>
+<body>
+ <header>
+        <nav class="menu-navegacion">
+            <!-- logo -->
+             <a href="#" class="logo-navegacion">
+                <h1 class="logo-tex"> ☕ Coffe </h1>
+             </a>
+             <!-- caja para el menu movil -->
+              <input type="checkbox" id="menu-toggle" class="menu-toggle">
+              <!-- menu de navegacion -->
+               <ul class="lista-menu">
+                <li class="lista-item">
+                    <a href="./index.html" class="link-nav" target="_blak"> Home </a>
+                </li>
+                <li class="lista-item">
+                    <a href="./menu.html" class="link-nav" target="_blak"> Menu </a>
+                </li>
+                <li class="lista-item">
+                    <a href="./galeria.html" class="link-nav" target="_blak"> Galeria </a>
+                </li>
+                <li class="lista-item">
+                    <a href="./contactenos.html" class="link-nav" target="_blak"> Contactenos </a>
+                </li>
+            </ul>
+                <!-- accones del icono de suario y del boton de hamburguesa -->
+                     <div class="nav-actions">
+                        <a href="./carrito.html" class="nav-carrito" title="carrito de compras">
+                            <i class="fa-solid fa-cart-shopping"></i> 
+                        </a>
+                        <!-- este actua como el boton de hamburguesa -->
+                         <label for="menu-toggle" class="hamburguer">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                         </label>
+                     </div>
+        </nav>
+    </header>
+  <div class="titulo-carrito">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <div class="texto-titulo">
+    <h1>Tu Carrito</h1>
+    <p>Revisa tus productos antes de finalizar la compra</p>
+  </div>
+</div>
+    <main class="contenedor">
+    <section class="carrito-vacio">
+      <i class="fa-solid fa-cart-shopping icono"></i>
+      <h2>Tu carrito está vacío</h2>
+      <p>¡Descubre productos increíbles y comienza tu compra!</p>
+      <a href="/menu.html" class="boton-explorar"><i class="fa-solid fa-mug-hot"></i> Explorar Productos</button>
+    </section>
+
+    <aside class="resumen">
+      <h3>Resumen del Pedido</h3>
+      <div class="detalle">
+        <p>Subtotal</p><span>$0</span>
+      </div>
+      <div class="detalle">
+        <p>Envío</p><span class="gratis">Gratis</span>
+      </div>
+      <div class="total">
+        <p>Total</p><span>$0</span>
+      </div>
+
+      <h4>Información de Envío</h4>
+      <label for="direccion">Dirección completa</label>
+      <input type="text" id="direccion" placeholder="Ej: Calle 123 #45-67">
+
+      <div class="fila">
+        <div>
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" placeholder="Bogotá">
+        </div>
+        <div>
+          <label for="codigo">Código Postal</label>
+          <input type="text" id="codigo" placeholder="110111">
+        </div>
+      </div>
+
+      <label for="pago">Método de pago</label>
+      <select id="pago">
+        <option>Efectivo contra entrega</option>
+        <option>Tarjeta de crédito</option>
+        <option>Nequi / Daviplata</option>
+      </select>
+
+      <button class="boton-finalizar"><i class="fa-solid fa-check"></i> Finalizar Compra</button>
+
+      <ul class="beneficios">
+        <li><i class="fa-solid fa-lock"></i> Compra segura y protegida</li>
+        <li><i class="fa-solid fa-truck"></i> Envío gratis en compras +$100.000</li>
+        <li><i class="fa-solid fa-headset"></i> Atención al cliente 24/7</li>
+      </ul>
+    </aside>
+  </main>
+</body>
+</html>

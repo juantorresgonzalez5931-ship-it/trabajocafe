@@ -5,8 +5,9 @@
     font-family: "poppins", sans-serif;
 }
 
-.body {
-    background-color: #1e1e1f;
+body {
+    background-color: #1e1e1f; /* color de fondo */
+    padding-top: 70px;         /* deja espacio para que el contenido no se esconda detrás del header fijo */
 }
 
 header {
@@ -85,8 +86,6 @@ header {
 }
 
 .titulo {
-    margin-top: 70px;
-    background-color: #1e1e1f;
     align-items: center;
     justify-content: center;
     color: white;
@@ -104,122 +103,62 @@ header {
     border-radius: 2px;
 }
 
-.targetas {
-    background-color: #1e1e1f;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px;                             
-  justify-items: center;                 
-  padding: 40px;
-}
-
-.targeta {
-    background-color: #3b141c;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 300px;
-    min-height: 450px;
+.imagenes {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    padding: 20px;
-    transition: 0.10s step-start;
-    flex: 1 1 300px;
-    max-width: 300px;
-    min-width: 280px;
-}
-
-.targeta:hover {
-    transform: translateY(-10px); 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3); 
-    border: 2px solid #e2750f;
-}
-
-.targeta img {
-    width: 100%;
-    border-radius: 10px;
-    height: 200px;
-    object-fit: contain;
-    padding: 5px;
-}
-
-.targeta h3 {
-    font-size: 1.3rem;
-    margin: 10px 0;
-    color: wheat;
-}
-
-.targeta p {
-    font-size: 0.9rem;
-    color: white;
-    margin-bottom: 15px;
-}
-
-.boton {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-/* BOTONES ESTILO UIVERSE PERSONALIZADOS */
-.btn {
-  position: relative;
-  display: i;
-  margin: 10px;
-  padding: 3px 25px;
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: #e2750f; /* color de texto (naranja característico) */
-  background: transparent;
-  cursor: pointer;
-  border: 2px solid #e2750f; /* borde naranja */
-  border-radius: 200px;
-  box-shadow: inset 0 0 0 0 #e2750f;
-}
-
-.btn:hover {
-  color: white; /* texto blanco al pasar el mouse */
-  box-shadow: inset 0 -100px 0 0 #e2750f; /* fondo naranja animado */
-}
-
-.btn:active {
-  transform: scale(0.95); /* pequeño efecto de clic */
-}
-
-/*  RESPONSIVE   */
-@media (max-width: 1760px) {
-  .targetas {
-    grid-template-columns: repeat(3, 1fr); 
+    flex-wrap: wrap;
     gap: 20px;
-  }
-}
-
-@media (max-width: 990px) {
-  .targetas {
-    grid-template-columns: repeat(2, 1fr); 
-  }
-
-  .titulo {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 660px) {
-  /* Las tarjetas se colocan en columna */
-  .targetas {
-    grid-template-columns: 1fr; 
+    justify-content: center;
     padding: 20px;
-  }
+}
 
-  .targeta {
-    width: 90%;
-    margin: 0 auto;
-  }
+.imagenes img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;    
+}
 
-  .lista-menu {
+.imagenes {
+    display: grid;                          
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 25px;                              
+    justify-items: center;                  
+    padding: 40px;
+    background-color: #1e1e1f;             
+}
+
+.imagenes img {
+    width: 100%;
+    max-width: 350px;                      
+    height: 220px;
+    object-fit: cover;
+    border-radius: 22px;
+    transition: all 0.1s ease-start;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.imagenes img:hover {
+    transform: scale(1.05);
+    border: 2px solid #e2750f;
+    filter: brightness(1.1);
+}
+
+/* responsive */
+
+@media (max-width: 1024px) {
+    .imagenes {
+        grid-template-columns: repeat(2, 1rf);
+    }
+
+    .titulo {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .lista-menu {
     position: absolute;
     top: 70px;
     right: 0;
@@ -277,5 +216,28 @@ header {
 
   .link-nav:hover {
     color: white;
+  }
+
+  .imagenes {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  .imagenes img {
+    max-width: 95%;
+    height: auto;
+  }
+
+  .nav-carrito {
+    font-size: 1.3rem;
   }
 }
